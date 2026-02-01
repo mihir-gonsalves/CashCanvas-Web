@@ -1,0 +1,48 @@
+# Python virtual environment
+.venv/
+
+# Bytecode + cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Test cache
+.pytest_cache/
+coverage/
+htmlcov/
+
+# SQLite database
+*.db
+*.sqlite3
+
+# Logs
+*.log
+
+# Data files (if not needed in repo)
+data/
+# If you want to track structure of `data/` but ignore CSVs:
+# data/*.csv
+
+# Environment variables
+.env
+
+# Node.js / Vite / React
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+*.log
+
+# Vite build artifacts
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Windows file metadata (from browser downloads)
+*.csv:Zone.Identifier
