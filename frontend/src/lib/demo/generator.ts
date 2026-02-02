@@ -57,7 +57,7 @@ export async function generateDemoData(count: number = 200): Promise<void> {
       account: randomChoice(ACCOUNTS),
       cost_center_name: costCenter,
       spend_category_names: categories,
-      notes: Math.random() > 0.8 ? 'Demo note' : null,
+      notes: 'Demo transaction',
     });
   }
 

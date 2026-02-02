@@ -1,5 +1,5 @@
 // frontend/src/components/learn/LearnDialog.tsx
-import { Dialog, DialogContent, DialogTitle, Box, Typography } from '@mui/material';
+import { Dialog, DialogContent, DialogTitle, Box, Typography, Link } from '@mui/material';
 import { QuestionMarkRounded } from '@mui/icons-material';
 
 interface LearnDialogProps {
@@ -117,7 +117,10 @@ export function LearnDialog({ open, onClose }: LearnDialogProps) {
               lineHeight: 1.6
             }}
           >
-            Made with &#10084;&#65039; by Mihir Gonsalves
+            Made with &#10084;&#65039; by {" "}
+            <Link href="https://mihirgonsalves.com/" target="_blank" rel="noopener">
+              Mihir Gonsalves
+            </Link>
           </Typography>
         </Box>
       </DialogContent>

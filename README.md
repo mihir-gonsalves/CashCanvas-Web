@@ -15,7 +15,7 @@ This application helps you track and visualize your personal finances by:
 
 ## Live Demo
 
-**Try it now**: [CashCanvas-Web on Vercel](https://your-app.vercel.app)
+**Try it now**: [CashCanvas on Vercel](https://trycashcanvas.vercel.app)
 
 Click **"Try Demo"** to load 200 sample transactions instantly. No signup, no backend, no data ever leaves your browser.
 
@@ -98,17 +98,17 @@ Frontend runs at: `http://localhost:5173`
 npm run build
 ```
 
-Output in `dist/` folder, ready for deployment to Vercel/Netlify/etc.
+Output in `dist/` folder, ready for deployment to Vercel.
 
 ## How It Works
 
 ### Data Storage
 All data is stored in `sessionStorage`, which means:
-- ✅ **Private**: Data never leaves your browser
-- ✅ **Fast**: No network latency
-- ✅ **Simple**: No authentication or accounts
-- ⚠️ **Ephemeral**: Data clears when you close the tab
-- ⚠️ **Tab-scoped**: Each tab has independent data
+- **Private**: Data never leaves your browser
+- **Fast**: No network latency
+- **Simple**: No authentication or accounts
+- **Ephemeral**: Data clears when you close the tab
+- **Tab-scoped**: Each tab has independent data
 
 **Why sessionStorage?**
 - Perfect for demos and portfolio pieces
@@ -383,7 +383,7 @@ git push origin main
 
 2. **Import to Vercel**
 - Go to [vercel.com](https://vercel.com)
-- Import your GitHub repository
+- Import GitHub repository
 - Framework: Vite
 - Root directory: `frontend`
 - Build command: `npm run build`
@@ -391,7 +391,6 @@ git push origin main
 
 3. **Deploy**
 - Click "Deploy"
-- Your app is live!
 
 ### Alternative Platforms
 - **Netlify**: Drag and drop `dist/` folder
@@ -401,10 +400,10 @@ git push origin main
 ## Browser Compatibility
 
 **Supported Browsers:**
-- Chrome 24+ ✅
-- Firefox 16+ ✅
-- Safari 10+ ✅
-- Edge 79+ ✅
+- Chrome 24+
+- Firefox 16+
+- Safari 10+
+- Edge 79+
 
 **Note**: Private browsing modes may have stricter sessionStorage limits. Data will still work but may clear more aggressively.
 
@@ -508,7 +507,7 @@ MIT License - See LICENSE file for details
 
 ## Roadmap
 
-### Completed ✅
+### Completed
 - CSV import from Discover and Schwab
 - Transaction CRUD operations
 - Filtering with pagination

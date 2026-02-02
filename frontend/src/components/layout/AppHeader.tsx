@@ -7,7 +7,13 @@ import { useLoadDemo } from '@/hooks/useLoadDemo';
 
 export function AppHeader() {
   const [learnOpen, setLearnOpen] = useState(false);
+  const [demoStarted, setDemoStarted] = useState(false);
   const { mutate: loadDemo, isPending } = useLoadDemo();
+
+  const handleTryDemo = () => {
+    setDemoStarted(true);
+    loadDemo(200);
+  };
 
   return (
     <>
@@ -35,8 +41,8 @@ export function AppHeader() {
         >
           <Button
             variant="contained"
-            onClick={() => loadDemo(200)}
-            disabled={isPending}
+            onClick={handleTryDemo}
+            disabled={isPending || demoStarted}
             sx={{
               px: 2,
               borderRadius: 2.5,
@@ -50,7 +56,7 @@ export function AppHeader() {
               },
             }}
           >
-            {isPending ? 'Loading...' : 'Try Demo'}
+            {demoStarted ? 'Demo Loaded' : isPending ? 'Loading...' : 'Try Demo'}
           </Button>
           <Button
             variant="outlined"

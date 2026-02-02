@@ -5,12 +5,12 @@
 **Pure client-side personal expense tracker** using sessionStorage for ephemeral data persistence, deployable to Vercel as a static site. Based on CashCanvas.
 
 ### Migration Goals
-1. ✅ **Eliminate backend** - All logic moved to browser
-2. ✅ **Zero hosting costs** - Deploy as static site to Vercel
-3. ✅ **Instant demo** - Recruiters can load data instantaneously
-4. ✅ **Preserve functionality** - Same features, different persistence layer
-5. ✅ **Maintain data contracts** - Keep existing component interfaces intact
-6. ✅ **Ephemeral data** - Data clears on tab close (browser warns on navigation)
+1. **Eliminate backend** - All logic moved to browser
+2. **Zero hosting costs** - Deploy as static site to Vercel
+3. **Instant demo** - Recruiters can load data instantaneously
+4. **Preserve functionality** - Same features, different persistence layer
+5. **Maintain data contracts** - Keep existing component interfaces intact
+6. **Ephemeral data** - Data clears on tab close (browser warns on navigation)
 
 ### Core User Workflow
 1. Download CSVs from financial institutions
@@ -117,10 +117,10 @@ frontend/src/
 5. **Zero dependencies** - No `idb` library needed
 
 **Tradeoffs:**
-1. ❌ No persistence across sessions (intentional - see benefits above)
-2. ❌ Storage limits (~5-10MB, sufficient for 10k+ transactions)
-3. ✅ Synchronous operations (simpler than IndexedDB promises)
-4. ✅ Tab-scoped (multiple tabs don't interfere)
+1. No persistence across sessions (intentional - see benefits above)
+2. Storage limits (~5-10MB, sufficient for 10k+ transactions)
+3. Synchronous operations (simpler than IndexedDB promises)
+4. Tab-scoped (multiple tabs don't interfere)
 
 ### Storage Keys
 ```typescript
@@ -307,7 +307,7 @@ const enrichedRows = useMemo(
 
 ## Implementation Status
 
-### ✅ Phase 0-3: Foundation & Transaction Grid (COMPLETE)
+### Phase 0-3: Foundation & Transaction Grid (COMPLETE)
 - Type definitions and API client
 - Tanstack Query setup with proper caching
 - Layout components (header, filters, workspace, analytics panel)
@@ -316,20 +316,20 @@ const enrichedRows = useMemo(
 - Dialog state management using discriminated unions
 - Analytics foundation with data contracts locked down
 
-### ✅ Phase 4: Charts & Analytics (COMPLETE)
+### Phase 4: Charts & Analytics (COMPLETE)
 - QuickStats summary cards
 - SpendCategoryChart with MUI Linear Progress bars
 - CostCenterChart with MUI Pie Chart
 - MonthlySpendingChart with MUI Bar Chart
 - BalanceTimeline with Lightweight Charts
 
-### ✅ Phase 5: CSV Upload & Export (COMPLETE)
+### Phase 5: CSV Upload & Export (COMPLETE)
 - CSVUploadDialog with institution selector
 - useUploadCSV mutation hook
 - Export CSV button in workspace header
 - Integration with existing filter state
 
-### ✅ Phase 6: Migration to Client-Side (COMPLETE)
+### Phase 6: Migration to Client-Side (COMPLETE)
 - sessionStorage database wrapper
 - CSV parsers ported to TypeScript with Zod validation
 - Demo data generation system
@@ -556,18 +556,10 @@ const { mutate: loadDemo, isPending } = useLoadDemo();
 
 **Migration complete when:**
 
-1. ✅ All existing features work without backend
-2. ✅ Data clears on tab close (browser warns on navigation)
-3. ✅ CSV uploads parse correctly
-4. ✅ Filters and analytics match backend behavior
-5. ✅ Demo data loads instantly
-6. ✅ Deployed to Vercel and accessible via URL
-7. ✅ No console errors in production build
-
-**Portfolio Ready:**
-
-- ✅ README explains architecture
-- ✅ Demo data loads with one click
-- ✅ Desktop-optimized UI
-- ✅ Clean codebase (no TODOs)
-- ✅ IndexedDB reference for advanced users
+1. All existing features work without backend
+2. Data clears on tab close (browser warns on navigation)
+3. CSV uploads parse correctly
+4. Filters and analytics match backend behavior
+5. Demo data loads instantly
+6. Deployed to Vercel and accessible via URL
+7. No console errors in production build
