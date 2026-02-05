@@ -13,7 +13,7 @@ export function useLoadDemo() {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: (count: number = 200) => generateDemoData(count),
+    mutationFn: () => generateDemoData(),
     onSuccess: () => {
       // Invalidate all queries to show demo data
       queryClient.invalidateQueries({ queryKey: ['transactions'] });

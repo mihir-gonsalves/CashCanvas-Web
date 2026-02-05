@@ -12,7 +12,7 @@ export function AppHeader() {
 
   const handleTryDemo = () => {
     setDemoStarted(true);
-    loadDemo(200);
+    loadDemo();
   };
 
   return (
